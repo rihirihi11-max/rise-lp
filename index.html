@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI退職代行RISE｜即日退職・全額返金保証</title>
+  <meta name="description" content="「辞めたい」その一言で、全部終わります。AIが会社対応・退職手続きを即日完了。最短即日退職。全額返金保証付き。" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1a5276;
+      --blue-dark: #154360;
+      --blue-light: #2471a3;
+      --gold: #d4ac0d;
+      --gold-light: #f1c40f;
+      --white: #ffffff;
+      --gray-text: #2c3e50;
+      --gray-light: #f4f6f8;
+      --gray-mid: #dde1e7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      color: var(--gray-text);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--blue);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+    .logo {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+    .logo span { color: var(--gold); }
+    header .cta-small {
+      background: var(--gold);
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 8px 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    header .cta-small:hover { background: var(--gold-light); transform: scale(1.04); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(145deg, var(--blue-dark) 0%, var(--blue) 60%, var(--blue-light) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 64px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 260px; height: 260px;
+      background: rgba(212,172,13,0.12);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a1a1a;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.06em;
+    }
+    .hero h1 {
+      font-size: clamp(1.75rem, 6vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      opacity: 0.9;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .cta-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #06C755;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 18px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(6,199,85,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-main:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(6,199,85,0.5); }
+    .cta-main svg { flex-shrink: 0; }
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      opacity: 0.7;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section { padding: 64px 20px; }
+    .section-inner { max-width: 680px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border-left: 3px solid var(--gold);
+      padding-left: 10px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(1.35rem, 4.5vw, 1.9rem);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 32px;
+      color: var(--blue-dark);
+    }
+
+    /* ── EMPATHY ── */
+    .empathy { background: var(--gray-light); }
+    .empathy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .empathy-list li {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      font-size: 0.97rem;
+      border-left: 4px solid var(--blue-light);
+      transition: transform 0.2s;
+    }
+    .empathy-list li:hover { transform: translateX(4px); }
+    .empathy-list li .icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── SOLUTION ── */
+    .solution { background: var(--white); }
+    .solution-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .solution-card {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid var(--blue);
+    }
+    .solution-card::after {
+      content: '';
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 80px; height: 80px;
+      background: rgba(26,82,118,0.06);
+      border-radius: 50%;
+    }
+    .solution-card .card-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--blue-light);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .solution-card h3 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .solution-card p { font-size: 0.92rem; color: #4a5568; line-height: 1.7; }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--blue-dark); color: var(--white); }
+    .pricing h2 { color: var(--white); }
+    .pricing-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .plan-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 28px 24px;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .plan-card:hover { transform: translateY(-3px); }
+    .plan-card.popular {
+      background: var(--white);
+      color: var(--gray-text);
+      border: 2px solid var(--gold);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #1a1a1a;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .plan-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      opacity: 0.75;
+      margin-bottom: 8px;
+    }
+    .plan-card.popular .plan-name { opacity: 1; color: var(--blue); }
+    .plan-price {
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+      color: var(--gold);
+    }
+    .plan-card.popular .plan-price { color: var(--blue-dark); }
+    .plan-price span { font-size: 1rem; font-weight: 600; }
+    .plan-desc {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .plan-card.popular .plan-desc { opacity: 0.8; color: var(--gray-text); }
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 0.88rem;
+    }
+    .plan-features li { display: flex; align-items: center; gap: 8px; }
+    .plan-features li::before {
+      content: '✓';
+      font-weight: 800;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .plan-card.popular .plan-features li::before { color: var(--blue); }
+    .guarantee-banner {
+      margin-top: 32px;
+      background: rgba(212,172,13,0.15);
+      border: 1px solid rgba(212,172,13,0.4);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .guarantee-icon { font-size: 2rem; flex-shrink: 0; }
+    .guarantee-text strong { display: block; font-size: 1rem; color: var(--gold); margin-bottom: 2px; }
+    .guarantee-text span { font-size: 0.82rem; opacity: 0.8; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1px solid var(--gray-mid);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 18px 20px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+    .faq-q:hover { background: var(--gray-light); }
+    .faq-q .q-mark {
+      background: var(--blue);
+      color: var(--white);
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .faq-q .arrow {
+      margin-left: auto;
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s;
+    }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner {
+      padding: 0 20px 18px 58px;
+      font-size: 0.9rem;
+      color: #4a5568;
+      line-height: 1.75;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color: var(--white);
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .final-cta h2 { color: var(--white); margin-bottom: 12px; }
+    .final-cta p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 36px; }
+    .line-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #06C755;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 20px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(6,199,85,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .line-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(6,199,85,0.55); }
+    .line-btn svg { width: 28px; height: 28px; }
+    .final-note {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      opacity: 0.65;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d2b3e;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.78rem;
+      line-height: 1.8;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: underline; }
+
+    /* ── FLOATING CTA ── */
+    .float-cta {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .float-cta.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .float-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #06C755;
+      color: white;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+      white-space: nowrap;
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 600px) {
+      .pricing-cards {
+        flex-direction: row;
+        gap: 16px;
+      }
+      .plan-card { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">AI退職代行<span>RISE</span></div>
+  <a href="https://lin.ee/9sup9Ge" class="cta-small" target="_blank" rel="noopener">無料相談はこちら</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="section-inner">
+    <div class="hero-badge">🤖 AIが即日対応・全額返金保証</div>
+    <h1>「辞めたい」<br>その一言で、<br><em>全部終わります。</em></h1>
+    <p class="hero-sub">
+      AIが会社対応・退職手続きを即日完了。<br>
+      最短<strong>即日退職</strong>。あなたは一切動かなくていい。
+    </p>
+    <a href="https://lin.ee/9sup9Ge" class="cta-main" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      まずは無料で相談する
+    </a>
+    <p class="hero-note">相談・見積もり完全無料｜24時間対応</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">即日</div>
+        <div class="stat-label">最短退職</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<small style="font-size:1.1rem">%</small></div>
+        <div class="stat-label">退職成功率</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">¥0</div>
+        <div class="stat-label">追加費用</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPATHY -->
+<section class="empathy">
+  <div class="section-inner fade-in">
+    <div class="section-tag">EMPATHY</div>
+    <h2>こんな気持ち、<br>ありませんか？</h2>
+    <ul class="empathy-list">
+      <li>
+        <span class="icon">😰</span>
+        <span>毎朝、会社に行く前に動悸がする</span>
+      </li>
+      <li>
+        <span class="icon">😶</span>
+        <span>「辞めます」の一言が怖くて言えない</span>
+      </li>
+      <li>
+        <span class="icon">😨</span>
+        <span>辞めたいけど引き止められそうで怖い</span>
+      </li>
+      <li>
+        <span class="icon">🛑</span>
+        <span>もう明日から行きたくない</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="section-inner fade-in">
+    <div class="section-tag">SOLUTION</div>
+    <h2>AI退職代行RISEが<br>全部解決します。</h2>
+    <div class="solution-cards">
+      <div class="solution-card">
+        <div class="card-num">01</div>
+        <h3>🤖 AIが即日対応</h3>
+        <p>あなたは「辞めたい」と伝えるだけ。会社への連絡・手続きは全てAIが完了します。もう自分で動く必要はゼロです。</p>
+      </div>
+      <div class="solution-card">
+        <div class="card-num">02</div>
+        <h3>⚖️ 専門家監修で安心</h3>
+        <p>法的リスクゼロ。どんな会社でも確実に退職できます。専門家監修で、あらゆる状況に対応しています。</p>
+      </div>
+      <div class="solution-card">
+        <div class="card-num">03</div>
+        <h3>💰 退職後のお金の不安も解消</h3>
+        <p>FP2級資格保有者が退職後の家計・転職・資産計画まで対応。次のステップを安心して踏み出せます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="section-inner fade-in">
+    <div class="section-tag" style="color:rgba(255,255,255,0.6); border-color: var(--gold);">PRICING</div>
+    <h2>シンプルな料金体系</h2>
+    <div class="pricing-cards">
+      <div class="plan-card">
+        <div class="plan-name">退職代行のみ</div>
+        <div class="plan-price">¥9,800<span> 税込</span></div>
+        <div class="plan-desc">退職の連絡・手続きを全てAIが対応</div>
+        <ul class="plan-features">
+          <li>会社への連絡・交渉</li>
+          <li>退職手続きサポート</li>
+          <li>24時間即日対応</li>
+          <li>全額返金保証</li>
+        </ul>
+      </div>
+      <div class="plan-card popular">
+        <div class="popular-badge">🌟 おすすめ</div>
+        <div class="plan-name">退職代行＋FP相談セット</div>
+        <div class="plan-price" style="color:var(--blue-dark)">¥14,800<span> 税込</span></div>
+        <div class="plan-desc">退職後の生活まで安心サポート</div>
+        <ul class="plan-features">
+          <li>退職代行プラン全て含む</li>
+          <li>FP2級資格者による相談</li>
+          <li>家計・転職・資産計画</li>
+          <li>全額返金保証</li>
+        </ul>
+      </div>
+    </div>
+    <div class="guarantee-banner">
+      <div class="guarantee-icon">🛡️</div>
+      <div class="guarantee-text">
+        <strong>全額返金保証付き</strong>
+        <span>万が一退職できない場合は、費用を全額お返しします。追加費用は一切かかりません。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner fade-in">
+    <div class="section-tag">FAQ</div>
+    <h2>よくある質問</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q</span>
+          <span>本当に辞められますか？</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">はい。これまで退職できなかったケースはありません。万が一退職できない場合は全額返金保証をお約束します。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q</span>
+          <span>辞められなかった場合はどうなりますか？</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">全額返金保証付きです。費用が無駄になることは一切ありません。安心してご相談ください。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q</span>
+          <span>退職後に会社から電話がきませんか？</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">退職完了後の会社からの連絡は法的に禁止されています。万が一連絡があった場合も、対応方法を丁寧にサポートします。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q</span>
+          <span>追加費用はかかりますか？</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">一切かかりません。表示価格のみで全て完結します。相談・見積もりも無料です。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="section-inner fade-in">
+    <h2>今日、終わりにしませんか。</h2>
+    <p>相談は完全無料。LINEで「相談したい」と送るだけ。<br>AIが即日、全部引き受けます。</p>
+    <a href="https://lin.ee/9sup9Ge" class="line-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINEで無料相談する
+    </a>
+    <p class="final-note">24時間対応｜相談・見積もり無料｜全額返金保証</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 AI退職代行RISE. All rights reserved.</p>
+  <p style="margin-top:6px"><a href="tokushoho.html">特定商取引法に基づく表示</a>｜<a href="privacy.html">プライバシーポリシー</a></p>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="float-cta" id="floatCta">
+  <a href="https://lin.ee/9sup9Ge" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINEで無料相談
+  </a>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Floating CTA
+  const floatCta = document.getElementById('floatCta');
+  window.addEventListener('scroll', () => {
+    floatCta.classList.toggle('visible', window.scrollY > 400);
+  });
+</script>
+</body>
+</html>
